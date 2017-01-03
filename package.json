@@ -1,0 +1,21 @@
+{
+  "name": "elm-kanji",
+  "version": "1.0.0",
+  "description": "Draw kanji in elm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "elm",
+    "kanji"
+  ],
+  "author": "Thomas BRISBOUT",
+  "license": "MIT",
+  "dependencies": {
+    "elm": "^0.18.0"
+  },
+  "devDependencies": {
+    "elm-oracle": "^1.1.1"
+  }
+}
