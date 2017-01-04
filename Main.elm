@@ -6,13 +6,18 @@ import Collage exposing (..)
 import Element exposing (toHtml, Element)
 
 
+hLine : Float -> Float -> Float -> Path
+hLine start end y =
+    segment ( start, y ) ( end, y )
+
+
 lineStyle : LineStyle
 lineStyle =
     { defaultLine | width = 5, cap = Round }
 
 
 type alias Kanji =
-    List Form
+    List Path
 
 
 width : Int
@@ -27,23 +32,30 @@ height =
 
 ichi : Kanji
 ichi =
-    [ segment ( -100, 0 ) ( 100, 0 )
+    [ hLine -100 100 0
     ]
-        |> List.map (traced lineStyle)
 
 
 ni : Kanji
 ni =
-    [ segment ( -80, 50 ) ( 80, 50 )
-    , segment ( -100, -50 ) ( 100, -50 )
+    [ hLine -80 80 50
+    , hLine -100 100 -50
     ]
-        |> List.map (traced lineStyle)
+
+
+san : Kanji
+san =
+    [ hLine -100 100 80
+    , hLine -80 80 0
+    , hLine -100 100 -80
+    ]
 
 
 displayKanji : Kanji -> Html msg
 displayKanji kanji =
     Html.div [ boxStyle ]
         [ kanji
+            |> List.map (traced lineStyle)
             |> collage width height
             |> toHtml
         ]
@@ -60,7 +72,7 @@ boxStyle =
 
 view : Html msg
 view =
-    [ ichi, ni ]
+    [ ichi, ni, san ]
         |> List.map displayKanji
         |> Html.div []
 
