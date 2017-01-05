@@ -4,20 +4,12 @@ import Html exposing (Html)
 import Html.Attributes exposing (style)
 import Collage exposing (..)
 import Element exposing (toHtml, Element)
-
-
-hLine : Float -> Float -> Float -> Path
-hLine start end y =
-    segment ( start, y ) ( end, y )
+import Kanji exposing (Kanji, kanjiList)
 
 
 lineStyle : LineStyle
 lineStyle =
     { defaultLine | width = 5, cap = Round }
-
-
-type alias Kanji =
-    List Path
 
 
 width : Int
@@ -28,27 +20,6 @@ width =
 height : Int
 height =
     600
-
-
-ichi : Kanji
-ichi =
-    [ hLine -100 100 0
-    ]
-
-
-ni : Kanji
-ni =
-    [ hLine -80 80 50
-    , hLine -100 100 -50
-    ]
-
-
-san : Kanji
-san =
-    [ hLine -100 100 80
-    , hLine -80 80 0
-    , hLine -100 100 -80
-    ]
 
 
 displayKanji : Kanji -> Html msg
@@ -72,7 +43,7 @@ boxStyle =
 
 view : Html msg
 view =
-    [ ichi, ni, san ]
+    kanjiList
         |> List.map displayKanji
         |> Html.div []
 
