@@ -50,5 +50,15 @@ go =
     ]
 
 
+roku : Kanji
+roku =
+    [ vLine 60 40 0
+    , hLine -60 60 30
+    , segment ( -20, 10 ) ( -60, -40 )
+    , segment ( 20, 10 ) ( 60, -40 )
+    ]
+
+
+kanjiList : List Kanji
 kanjiList =
-    [ ichi, ni, san, yon, go ]
+    [ ichi, ni, san, yon, go, roku ]
