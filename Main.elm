@@ -35,9 +35,9 @@ displayKanji kanji =
 boxStyle : Html.Attribute msg
 boxStyle =
     style
-        [ ( "border", "1px solid black" )
-        , ( "width", (toString width) ++ "px" )
+        [ ( "width", (toString width) ++ "px" )
         , ( "margin", "15px auto" )
+        , ( "background-color", "white" )
         ]
 
 

@@ -4,7 +4,8 @@
   "description": "Draw kanji in elm",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "chokidar '*.elm' -c 'npm run build'",
+    "build": "elm-make Main.elm --output elm.js"
   },
   "keywords": [
     "elm",
@@ -16,6 +17,7 @@
     "elm": "^0.18.0"
   },
   "devDependencies": {
+    "chokidar-cli": "^1.2.0",
     "elm-oracle": "^1.1.1"
   }
 }
