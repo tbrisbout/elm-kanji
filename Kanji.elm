@@ -59,6 +59,13 @@ roku =
     ]
 
 
+nana : Kanji
+nana =
+    [ segment ( -60, 30 ) ( 60, 40 )
+    , path [ ( -30, 100 ), ( -30, -60 ), ( -25, -65 ), ( 55, -65 ), ( 60, -60 ), ( 60, -50 ) ]
+    ]
+
+
 kanjiList : List Kanji
 kanjiList =
-    [ ichi, ni, san, yon, go, roku ]
+    [ ichi, ni, san, yon, go, roku, nana ]

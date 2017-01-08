@@ -10907,6 +10907,43 @@ var _user$project$Draw$hLine = F3(
 			{ctor: '_Tuple2', _0: end, _1: y});
 	});
 
+var _user$project$Kanji$nana = {
+	ctor: '::',
+	_0: A2(
+		_evancz$elm_graphics$Collage$segment,
+		{ctor: '_Tuple2', _0: -60, _1: 30},
+		{ctor: '_Tuple2', _0: 60, _1: 40}),
+	_1: {
+		ctor: '::',
+		_0: _evancz$elm_graphics$Collage$path(
+			{
+				ctor: '::',
+				_0: {ctor: '_Tuple2', _0: -30, _1: 100},
+				_1: {
+					ctor: '::',
+					_0: {ctor: '_Tuple2', _0: -30, _1: -60},
+					_1: {
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: -25, _1: -65},
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 55, _1: -65},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 60, _1: -60},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 60, _1: -50},
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					}
+				}
+			}),
+		_1: {ctor: '[]'}
+	}
+};
 var _user$project$Kanji$roku = {
 	ctor: '::',
 	_0: A3(_user$project$Draw$vLine, 60, 40, 0),
@@ -11058,7 +11095,11 @@ var _user$project$Kanji$kanjiList = {
 					_1: {
 						ctor: '::',
 						_0: _user$project$Kanji$roku,
-						_1: {ctor: '[]'}
+						_1: {
+							ctor: '::',
+							_0: _user$project$Kanji$nana,
+							_1: {ctor: '[]'}
+						}
 					}
 				}
 			}
