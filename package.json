@@ -9,7 +9,8 @@
     "start": "concurrently --kill-others --prefix '[{name}]' -n 'server,elm-make' \"npm run server\" \"npm run watch\"",
     "server": "browser-sync start --server --files index.html elm.js",
     "watch": "chokidar '*.elm' -c 'npm run build'",
-    "build": "elm-make Main.elm --output elm.js | true"
+    "build": "elm-make Main.elm --output elm.js | true",
+    "update-count": "current=$(tail -1 Kanji.elm | grep -o \",\" | wc -l) && sed -i \"s/$current/$(($current + 1))/\" README.md"
   },
   "keywords": [
     "elm",
