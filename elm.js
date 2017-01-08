@@ -11153,6 +11153,20 @@ var _user$project$Kanji$kanjiList = {
 	}
 };
 
+var _user$project$Main$mainStyle = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: {ctor: '_Tuple2', _0: 'display', _1: 'flex'},
+		_1: {
+			ctor: '::',
+			_0: {ctor: '_Tuple2', _0: 'flex-wrap', _1: 'wrap'},
+			_1: {
+				ctor: '::',
+				_0: {ctor: '_Tuple2', _0: 'justify-content', _1: 'center'},
+				_1: {ctor: '[]'}
+			}
+		}
+	});
 var _user$project$Main$height = 600;
 var _user$project$Main$width = 600;
 var _user$project$Main$boxStyle = _elm_lang$html$Html_Attributes$style(
@@ -11168,11 +11182,15 @@ var _user$project$Main$boxStyle = _elm_lang$html$Html_Attributes$style(
 		},
 		_1: {
 			ctor: '::',
-			_0: {ctor: '_Tuple2', _0: 'margin', _1: '15px auto'},
+			_0: {ctor: '_Tuple2', _0: 'margin', _1: '10px'},
 			_1: {
 				ctor: '::',
 				_0: {ctor: '_Tuple2', _0: 'background-color', _1: 'white'},
-				_1: {ctor: '[]'}
+				_1: {
+					ctor: '::',
+					_0: {ctor: '_Tuple2', _0: 'box-shadow', _1: 'rgba(0,0,0,.1) 0 35px 35px'},
+					_1: {ctor: '[]'}
+				}
 			}
 		}
 	});
@@ -11203,7 +11221,11 @@ var _user$project$Main$displayKanji = function (kanji) {
 };
 var _user$project$Main$view = A2(
 	_elm_lang$html$Html$div,
-	{ctor: '[]'},
+	{
+		ctor: '::',
+		_0: _user$project$Main$mainStyle,
+		_1: {ctor: '[]'}
+	},
 	A2(_elm_lang$core$List$map, _user$project$Main$displayKanji, _user$project$Kanji$kanjiList));
 var _user$project$Main$main = _elm_lang$virtual_dom$Native_VirtualDom.staticProgram(_user$project$Main$view);
 

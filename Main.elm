@@ -32,21 +32,35 @@ displayKanji kanji =
         ]
 
 
-boxStyle : Html.Attribute msg
-boxStyle =
-    style
-        [ ( "width", (toString width) ++ "px" )
-        , ( "margin", "15px auto" )
-        , ( "background-color", "white" )
-        ]
-
-
 view : Html msg
 view =
     kanjiList
         |> List.map displayKanji
-        |> Html.div []
+        |> Html.div [ mainStyle ]
 
 
 main =
     view
+
+
+
+-- STYLES
+
+
+boxStyle : Html.Attribute msg
+boxStyle =
+    style
+        [ ( "width", (toString width) ++ "px" )
+        , ( "margin", "10px" )
+        , ( "background-color", "white" )
+        , ( "box-shadow", "rgba(0,0,0,.1) 0 35px 35px" )
+        ]
+
+
+mainStyle : Html.Attribute msg
+mainStyle =
+    style
+        [ ( "display", "flex" )
+        , ( "flex-wrap", "wrap" )
+        , ( "justify-content", "center" )
+        ]
