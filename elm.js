@@ -10892,6 +10892,31 @@ var _evancz$elm_graphics$Collage$ngon = F2(
 				A2(_elm_lang$core$List$range, 0, n - 1)));
 	});
 
+var _user$project$Draw$curvedLine = F3(
+	function (_p1, _p0, offset) {
+		var _p2 = _p1;
+		var _p7 = _p2._1;
+		var _p6 = _p2._0;
+		var _p3 = _p0;
+		var _p5 = _p3._1;
+		var _p4 = _p3._0;
+		var y = ((_p7 + _p5) / 2) - _elm_lang$core$Basics$abs(offset);
+		var x = ((_p6 + _p4) / 2) + offset;
+		return _evancz$elm_graphics$Collage$path(
+			{
+				ctor: '::',
+				_0: {ctor: '_Tuple2', _0: _p6, _1: _p7},
+				_1: {
+					ctor: '::',
+					_0: {ctor: '_Tuple2', _0: x, _1: y},
+					_1: {
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: _p4, _1: _p5},
+						_1: {ctor: '[]'}
+					}
+				}
+			});
+	});
 var _user$project$Draw$vLine = F3(
 	function (start, end, x) {
 		return A2(
@@ -10907,6 +10932,23 @@ var _user$project$Draw$hLine = F3(
 			{ctor: '_Tuple2', _0: end, _1: y});
 	});
 
+var _user$project$Kanji$hachi = {
+	ctor: '::',
+	_0: A3(
+		_user$project$Draw$curvedLine,
+		{ctor: '_Tuple2', _0: -20, _1: 60},
+		{ctor: '_Tuple2', _0: -50, _1: -60},
+		5),
+	_1: {
+		ctor: '::',
+		_0: A3(
+			_user$project$Draw$curvedLine,
+			{ctor: '_Tuple2', _0: 20, _1: 60},
+			{ctor: '_Tuple2', _0: 50, _1: -60},
+			-5),
+		_1: {ctor: '[]'}
+	}
+};
 var _user$project$Kanji$nana = {
 	ctor: '::',
 	_0: A2(
@@ -11098,7 +11140,11 @@ var _user$project$Kanji$kanjiList = {
 						_1: {
 							ctor: '::',
 							_0: _user$project$Kanji$nana,
-							_1: {ctor: '[]'}
+							_1: {
+								ctor: '::',
+								_0: _user$project$Kanji$hachi,
+								_1: {ctor: '[]'}
+							}
 						}
 					}
 				}

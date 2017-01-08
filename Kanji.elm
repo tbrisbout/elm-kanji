@@ -1,7 +1,7 @@
 module Kanji exposing (Kanji, kanjiList)
 
 import Collage exposing (..)
-import Draw exposing (hLine, vLine)
+import Draw exposing (hLine, vLine, curvedLine)
 
 
 type alias Kanji =
@@ -66,6 +66,13 @@ nana =
     ]
 
 
+hachi : Kanji
+hachi =
+    [ curvedLine ( -20, 60 ) ( -50, -60 ) 5
+    , curvedLine ( 20, 60 ) ( 50, -60 ) -5
+    ]
+
+
 kanjiList : List Kanji
 kanjiList =
-    [ ichi, ni, san, yon, go, roku, nana ]
+    [ ichi, ni, san, yon, go, roku, nana, hachi ]
