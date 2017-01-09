@@ -81,6 +81,13 @@ kyuu =
     ]
 
 
+juu : Kanji
+juu =
+    [ hLine -60 60 0
+    , vLine 60 -80 0
+    ]
+
+
 downLeftCurve : Path
 downLeftCurve =
     curvedLine ( -20, 60 ) ( -50, -60 ) 5
@@ -88,4 +95,4 @@ downLeftCurve =
 
 kanjiList : List Kanji
 kanjiList =
-    [ ichi, ni, san, yon, go, roku, nana, hachi, kyuu ]
+    [ ichi, ni, san, yon, go, roku, nana, hachi, kyuu, juu ]
