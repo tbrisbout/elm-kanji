@@ -10932,13 +10932,48 @@ var _user$project$Draw$hLine = F3(
 			{ctor: '_Tuple2', _0: end, _1: y});
 	});
 
+var _user$project$Kanji$downLeftCurve = A3(
+	_user$project$Draw$curvedLine,
+	{ctor: '_Tuple2', _0: -20, _1: 60},
+	{ctor: '_Tuple2', _0: -50, _1: -60},
+	5);
+var _user$project$Kanji$kyuu = {
+	ctor: '::',
+	_0: _user$project$Kanji$downLeftCurve,
+	_1: {
+		ctor: '::',
+		_0: A3(_user$project$Draw$hLine, -60, 30, 30),
+		_1: {
+			ctor: '::',
+			_0: _evancz$elm_graphics$Collage$path(
+				{
+					ctor: '::',
+					_0: {ctor: '_Tuple2', _0: 30, _1: 30},
+					_1: {
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: 30, _1: -55},
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 35, _1: -60},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 50, _1: -60},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 60, _1: -50},
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					}
+				}),
+			_1: {ctor: '[]'}
+		}
+	}
+};
 var _user$project$Kanji$hachi = {
 	ctor: '::',
-	_0: A3(
-		_user$project$Draw$curvedLine,
-		{ctor: '_Tuple2', _0: -20, _1: 60},
-		{ctor: '_Tuple2', _0: -50, _1: -60},
-		5),
+	_0: _user$project$Kanji$downLeftCurve,
 	_1: {
 		ctor: '::',
 		_0: A3(
@@ -11143,7 +11178,11 @@ var _user$project$Kanji$kanjiList = {
 							_1: {
 								ctor: '::',
 								_0: _user$project$Kanji$hachi,
-								_1: {ctor: '[]'}
+								_1: {
+									ctor: '::',
+									_0: _user$project$Kanji$kyuu,
+									_1: {ctor: '[]'}
+								}
 							}
 						}
 					}

@@ -68,11 +68,24 @@ nana =
 
 hachi : Kanji
 hachi =
-    [ curvedLine ( -20, 60 ) ( -50, -60 ) 5
+    [ downLeftCurve
     , curvedLine ( 20, 60 ) ( 50, -60 ) -5
     ]
 
 
+kyuu : Kanji
+kyuu =
+    [ downLeftCurve
+    , hLine -60 30 30
+    , path [ ( 30, 30 ), ( 30, -55 ), ( 35, -60 ), ( 50, -60 ), ( 60, -50 ) ]
+    ]
+
+
+downLeftCurve : Path
+downLeftCurve =
+    curvedLine ( -20, 60 ) ( -50, -60 ) 5
+
+
 kanjiList : List Kanji
 kanjiList =
-    [ ichi, ni, san, yon, go, roku, nana, hachi ]
+    [ ichi, ni, san, yon, go, roku, nana, hachi, kyuu ]
