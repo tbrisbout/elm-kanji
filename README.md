@@ -2,7 +2,7 @@
 
 This project is just an attempt to draw a few kanji with elm graphics library.
 
-Number of kanji represented so far: 10
+Number of kanji represented so far: 11
 
 ## How to start
 
