@@ -1,7 +1,7 @@
 module Main exposing (..)
 
 import Html exposing (Html)
-import Html.Attributes exposing (style)
+import Html.Attributes exposing (style, href)
 import Collage exposing (..)
 import Element exposing (toHtml, Element)
 import Kanji exposing (Kanji, kanjiList)
@@ -34,9 +34,21 @@ displayKanji kanji =
 
 view : Html msg
 view =
-    kanjiList
-        |> List.map displayKanji
-        |> Html.div [ mainStyle ]
+    Html.div []
+        [ kanjiList
+            |> List.map displayKanji
+            |> Html.div [ mainStyle ]
+        , githubLink
+        ]
+
+
+githubLink : Html msg
+githubLink =
+    Html.a
+        [ githubLinkStyle
+        , href "https://github.com/tbrisbout/elm-kanji"
+        ]
+        [ Html.text "Source on Github" ]
 
 
 main =
@@ -57,10 +69,22 @@ boxStyle =
         ]
 
 
+githubLinkStyle : Html.Attribute msg
+githubLinkStyle =
+    style
+        [ ( "display", "block" )
+        , ( "width", "100%" )
+        , ( "color", "white" )
+        , ( "text-align", "center" )
+        , ( "text-decoration", "none" )
+        ]
+
+
 mainStyle : Html.Attribute msg
 mainStyle =
     style
         [ ( "display", "flex" )
         , ( "flex-wrap", "wrap" )
         , ( "justify-content", "center" )
+        , ( "text-align", "center" )
         ]
