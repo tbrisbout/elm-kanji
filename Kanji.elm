@@ -97,6 +97,16 @@ kuchi =
     ]
 
 
+hi : Kanji
+hi =
+    [ vLine 100 -100 -60
+    , hLine -60 60 100
+    , vLine 100 -100 60
+    , hLine -60 60 0
+    , hLine -60 60 -90
+    ]
+
+
 downLeftCurve : Path
 downLeftCurve =
     curvedLine ( -20, 60 ) ( -50, -60 ) 5
@@ -104,4 +114,4 @@ downLeftCurve =
 
 kanjiList : List Kanji
 kanjiList =
-    [ ichi, ni, san, yon, go, roku, nana, hachi, kyuu, juu, kuchi ]
+    [ ichi, ni, san, yon, go, roku, nana, hachi, kyuu, juu, kuchi, hi ]
