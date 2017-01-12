@@ -118,6 +118,17 @@ tsuki =
     ]
 
 
+ta : Kanji
+ta =
+    [ vLine 100 -100 -100
+    , hLine -100 100 100
+    , vLine 100 -100 100
+    , vLine 100 -100 0
+    , hLine -100 100 0
+    , hLine -100 100 -90
+    ]
+
+
 downLeftCurve : Path
 downLeftCurve =
     curvedLine ( -20, 60 ) ( -50, -60 ) 5
@@ -125,4 +136,4 @@ downLeftCurve =
 
 kanjiList : List Kanji
 kanjiList =
-    [ ichi, ni, san, yon, go, roku, nana, hachi, kyuu, juu, kuchi, hi, tsuki ]
+    [ ichi, ni, san, yon, go, roku, nana, hachi, kyuu, juu, kuchi, hi, tsuki, ta ]
