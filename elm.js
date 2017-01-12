@@ -11331,44 +11331,6 @@ var _user$project$Main$mainStyle = _elm_lang$html$Html_Attributes$style(
 			}
 		}
 	});
-var _user$project$Main$githubLinkStyle = _elm_lang$html$Html_Attributes$style(
-	{
-		ctor: '::',
-		_0: {ctor: '_Tuple2', _0: 'display', _1: 'block'},
-		_1: {
-			ctor: '::',
-			_0: {ctor: '_Tuple2', _0: 'width', _1: '100%'},
-			_1: {
-				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: 'color', _1: 'white'},
-				_1: {
-					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: 'text-align', _1: 'center'},
-					_1: {
-						ctor: '::',
-						_0: {ctor: '_Tuple2', _0: 'text-decoration', _1: 'none'},
-						_1: {ctor: '[]'}
-					}
-				}
-			}
-		}
-	});
-var _user$project$Main$githubLink = A2(
-	_elm_lang$html$Html$a,
-	{
-		ctor: '::',
-		_0: _user$project$Main$githubLinkStyle,
-		_1: {
-			ctor: '::',
-			_0: _elm_lang$html$Html_Attributes$href('https://github.com/tbrisbout/elm-kanji'),
-			_1: {ctor: '[]'}
-		}
-	},
-	{
-		ctor: '::',
-		_0: _elm_lang$html$Html$text('Source on Github'),
-		_1: {ctor: '[]'}
-	});
 var _user$project$Main$height = 600;
 var _user$project$Main$width = 600;
 var _user$project$Main$boxStyle = _elm_lang$html$Html_Attributes$style(
@@ -11423,23 +11385,12 @@ var _user$project$Main$displayKanji = function (kanji) {
 };
 var _user$project$Main$view = A2(
 	_elm_lang$html$Html$div,
-	{ctor: '[]'},
 	{
 		ctor: '::',
-		_0: A2(
-			_elm_lang$html$Html$div,
-			{
-				ctor: '::',
-				_0: _user$project$Main$mainStyle,
-				_1: {ctor: '[]'}
-			},
-			A2(_elm_lang$core$List$map, _user$project$Main$displayKanji, _user$project$Kanji$kanjiList)),
-		_1: {
-			ctor: '::',
-			_0: _user$project$Main$githubLink,
-			_1: {ctor: '[]'}
-		}
-	});
+		_0: _user$project$Main$mainStyle,
+		_1: {ctor: '[]'}
+	},
+	A2(_elm_lang$core$List$map, _user$project$Main$displayKanji, _user$project$Kanji$kanjiList));
 var _user$project$Main$main = _elm_lang$virtual_dom$Native_VirtualDom.staticProgram(_user$project$Main$view);
 
 var Elm = {};
