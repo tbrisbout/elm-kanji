@@ -10937,6 +10937,31 @@ var _user$project$Kanji$downLeftCurve = A3(
 	{ctor: '_Tuple2', _0: -20, _1: 60},
 	{ctor: '_Tuple2', _0: -50, _1: -60},
 	5);
+var _user$project$Kanji$me = {
+	ctor: '::',
+	_0: A3(_user$project$Draw$vLine, 100, -90, -60),
+	_1: {
+		ctor: '::',
+		_0: A3(_user$project$Draw$hLine, -60, 60, 100),
+		_1: {
+			ctor: '::',
+			_0: A3(_user$project$Draw$vLine, 100, -90, 60),
+			_1: {
+				ctor: '::',
+				_0: A3(_user$project$Draw$hLine, -60, 60, 40),
+				_1: {
+					ctor: '::',
+					_0: A3(_user$project$Draw$hLine, -60, 60, -20),
+					_1: {
+						ctor: '::',
+						_0: A3(_user$project$Draw$hLine, -60, 60, -80),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		}
+	}
+};
 var _user$project$Kanji$ta = {
 	ctor: '::',
 	_0: A3(_user$project$Draw$vLine, 100, -100, -100),
@@ -11297,7 +11322,11 @@ var _user$project$Kanji$kanjiList = {
 													_1: {
 														ctor: '::',
 														_0: _user$project$Kanji$ta,
-														_1: {ctor: '[]'}
+														_1: {
+															ctor: '::',
+															_0: _user$project$Kanji$me,
+															_1: {ctor: '[]'}
+														}
 													}
 												}
 											}

@@ -129,6 +129,17 @@ ta =
     ]
 
 
+me : Kanji
+me =
+    [ vLine 100 -90 -60
+    , hLine -60 60 100
+    , vLine 100 -90 60
+    , hLine -60 60 40
+    , hLine -60 60 -20
+    , hLine -60 60 -80
+    ]
+
+
 downLeftCurve : Path
 downLeftCurve =
     curvedLine ( -20, 60 ) ( -50, -60 ) 5
@@ -136,4 +147,4 @@ downLeftCurve =
 
 kanjiList : List Kanji
 kanjiList =
-    [ ichi, ni, san, yon, go, roku, nana, hachi, kyuu, juu, kuchi, hi, tsuki, ta ]
+    [ ichi, ni, san, yon, go, roku, nana, hachi, kyuu, juu, kuchi, hi, tsuki, ta, me ]
