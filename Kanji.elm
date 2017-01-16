@@ -140,6 +140,17 @@ me =
     ]
 
 
+furui : Kanji
+furui =
+    [ hLine -80 80 50
+    , vLine 100 0 0
+    , vLine 0 -65 -60
+    , hLine -60 60 0
+    , vLine 0 -65 60
+    , hLine -60 60 -60
+    ]
+
+
 downLeftCurve : Path
 downLeftCurve =
     curvedLine ( -20, 60 ) ( -50, -60 ) 5
@@ -147,4 +158,4 @@ downLeftCurve =
 
 kanjiList : List Kanji
 kanjiList =
-    [ ichi, ni, san, yon, go, roku, nana, hachi, kyuu, juu, kuchi, hi, tsuki, ta, me ]
+    [ ichi, ni, san, yon, go, roku, nana, hachi, kyuu, juu, kuchi, hi, tsuki, ta, me, furui ]
